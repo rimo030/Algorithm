@@ -1,6 +1,6 @@
 SELECT COUNT(*) as COUNT
-FROM (SELECT *, CONV(GENOTYPE, 10, 2) as t FROM ECOLI_DATA) AS drive
+FROM (SELECT *, CONV(GENOTYPE, 10, 2) as c FROM ECOLI_DATA) AS drive
 WHERE
-    t = "1"
-    OR ((t LIKE "%00" OR t LIKE "%01") 
-    AND (t LIKE '%100' OR t LIKE '%101' OR t LIKE '%1'))
+    c = "1"
+    OR ((c LIKE "%00" OR c LIKE "%01") 
+    AND (c LIKE '%100' OR c LIKE '%101' OR c LIKE '%1'))
